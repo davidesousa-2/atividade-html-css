@@ -1,8 +1,7 @@
-/* Configuração global básica */
+/* Configuração global e imagem de fundo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333333;
+    color: #f3f4f6; /* Texto claro para destacar no fundo escuro */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,6 +9,13 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+
+    /* --- Imagem de Fundo (Batman) --- */
+    background-image: url('fundo.jpg');
+    background-size: cover;          /* Cobre toda a tela */
+    background-position: center;     /* Centraliza a imagem */
+    background-repeat: no-repeat;    /* Não repete a imagem */
+    background-attachment: fixed;    /* Fixo ao rolar a página */
 }
 
 main {
@@ -19,29 +25,32 @@ main {
 }
 
 h1 {
-    color: #1f2937;
+    color: aliceblue;
     font-size: 1.8rem;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para destacar no escuro */
 }
 
-p {
-    color: #4b5563;
+h5 {
+    color: aliceblue;
     line-height: 1.5;
     margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Estilização do Cartão (Box Model) --- */
 .cartao {
-    background-color: #ffffff;
+    background-color: rgba(17, 24, 39, 0.85); /* Fundo escuro levemente transparente */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     padding: 30px;
     margin-top: 20px;
     width: 100%;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    box-sizing: border-box; /* Garante que padding não estoure a largura */
+    box-sizing: border-box;
 }
 
 /* Foto de Perfil */
@@ -51,26 +60,27 @@ p {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-    border: 3px solid #2563eb;
+    border: 3px solid #3b82f6;
 }
 
 .cartao h2 {
     margin: 10px 0 5px;
-    color: #1f2937;
+    color: #ffffff;
     font-size: 1.5rem;
 }
 
 .cargo {
     font-weight: bold;
-    color: #2563eb;
+    color: #60a5fa;
     font-size: 0.95rem;
     margin-bottom: 10px;
 }
 
 .descricao {
     font-size: 0.9rem;
-    color: #6b7280;
+    color: #9ca3af;
     margin-bottom: 20px;
+    text-shadow: none;
 }
 
 /* --- Container e Botões --- */
@@ -88,14 +98,13 @@ p {
     justify-content: center;
     width: 100%;
     padding: 12px;
-    background-color: #2563eb; /* Cor padrão */
     color: #ffffff;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
     box-sizing: border-box;
-    transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+    transition: transform 0.2s ease, opacity 0.3s ease;
 }
 
 /* Espaço entre o ícone e o texto */
@@ -110,7 +119,7 @@ p {
     opacity: 0.9;
 }
 
-/* Cores Personalizadas para cada Botão (Opcional, mas fica ótimo!) */
+/* Cores Personalizadas para cada Botão */
 
 /* GitHub - Preto/Cinza Escuro */
 .botoes-card a:nth-child(1) {
