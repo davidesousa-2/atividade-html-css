@@ -1,65 +1,128 @@
+/* Configuração global básica */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f9;
-  color: #333333;
-  margin: 0;
-  padding: 20px;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
 }
+
+main {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
 h1 {
-    color: #1e3a8a;
-    text-align: center;
-    margin-bottom: 20px;
+    color: #1f2937;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
+
 p {
-    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.5;
     margin-bottom: 15px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
-.imagem-container {
-    text-align: center;
-    margin: 30px 0;
-}
-.imagem-destaque {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 2px solid #cbd5e1;
-}
+
+/* --- Estilização do Cartão (Box Model) --- */
 .cartao {
     background-color: #ffffff;
     border-radius: 12px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 24px;
-    margin: 40px auto;
-    border: 1px solid #e2e8f0;
-    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box; /* Garante que padding não estoure a largura */
 }
-.cartao .foto-perfil {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 3px solid #2563eb;
-  object-fit: cover; 
-  display: block;    
-  margin: 0 auto 12px auto;
+
+/* Foto de Perfil */
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #2563eb;
 }
+
 .cartao h2 {
-    font-size: 1.25rem;
-    color: #0f172a;
-    margin: 10px 0 5px 0;
+    margin: 10px 0 5px;
+    color: #1f2937;
+    font-size: 1.5rem;
 }
-.cartao .cargo {
-    font-size: 0.9rem;
+
+.cargo {
+    font-weight: bold;
     color: #2563eb;
-    margin-bottom: 12px;
-    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
 }
-.cartao .descricao {
-    font-size: 0.875rem;
-    color: #64748b;
-    margin: 0;
+
+.descricao {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* --- Container e Botões --- */
+.botoes-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Estilo Base dos Botões */
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb; /* Cor padrão */
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+}
+
+/* Espaço entre o ícone e o texto */
+.botao i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* Efeito Hover global */
+.botao:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Cores Personalizadas para cada Botão (Opcional, mas fica ótimo!) */
+
+/* GitHub - Preto/Cinza Escuro */
+.botoes-card a:nth-child(1) {
+    background-color: #24292e;
+}
+
+/* Instagram - Gradiente/Rosa forte */
+.botoes-card a:nth-child(2) {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+/* Contato / E-mail - Azul clássico */
+.botoes-card a:nth-child(3) {
+    background-color: #0ea5e9;
 }

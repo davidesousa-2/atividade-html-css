@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Minha página e cartão de Apresentação</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Bem vindo ao Meu Projeto Web!</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha página e cartão de Apresentação</title>
+    <!-- Link do FontAwesome para carregar os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Bem-vindo ao Meu Projeto Web!</h1>
         <p>Esta é uma página criada como atividade prática de HTML e CSS. O objetivo é aplicar conceitos fundamentais de estrutura de páginas web e estilização externa.</p>
-        <p>Abaixo você pode conferir uma imagem ilustrativa e um cartão de apresentação pessoal estilizado com o modelo de caixa (Box Model) do CSS.</p>
-
-        <div class="imagem-container">
-            <img src="https://picsum.photos/600/300" alt="Imagem ilustrativa de um ambiente de desenvolvimento de software com linhas de código" class="imagem-destaque">
-        </div>
+        <p>Abaixo você pode conferir o meu cartão de apresentação pessoal estilizado com o modelo de caixa (Box Model) do CSS.</p>
 
         <div class="cartao">
             <img src="perfil.jpg" alt="Foto de perfil de Davi de Sousa" class="foto-perfil">
-            <h2>Davi de Sousa </h2>
+            <h2>Davi de Sousa</h2>
             <p class="cargo">Desenvolvedor Front-end em Formação</p>
             <p class="descricao">Apreciador da tecnologia, aprendendo HTML e CSS para criar interfaces modernas e funcionais.</p>
+
+            <!-- Botões atualizados com seus links, ícones e o mailto no e-mail -->
+            <div class="botoes-card">
+                <a href="https://github.com/davidesousa-2" target="_blank" class="botao">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://www.instagram.com/daviizer010_/" target="_blank" class="botao">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="mailto:davi.barboza2@aluno.ce.gov.br" class="botao">
+                    <i class="fa-solid fa-envelope"></i> Contato
+                </a>
+            </div>
         </div>
-    </body>
+    </main>
+</body>
 </html>
